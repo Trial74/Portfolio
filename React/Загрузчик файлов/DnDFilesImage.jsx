@@ -1,8 +1,7 @@
 /*** 26.09.2024 / DnDFiles.jsx from trial for UazFan project ***/
 
-import React, { useState, useImperativeHandle, forwardRef, useRef } from "react";
+import { useState, useImperativeHandle, forwardRef, useRef } from "react";
 import { upload, plus } from "@/Administrator/Components/Icons/Icons";
-import axios from "axios";
 
 /**
  * Метод загрузки изображений обычным методом и Drag and Drop
@@ -39,8 +38,7 @@ const DnDFilesImage = forwardRef((
         file = false,
         store,
         component = 'N',
-        handleDnDFiles,
-        develop = false
+        handleDnDFiles
     }, ref) => {
 
     /**

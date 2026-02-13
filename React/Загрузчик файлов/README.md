@@ -90,7 +90,5 @@ function MyForm() {
 
 ## Зависимости
 
-- `react`
-- `axios` - HTTP-клиент
 - Иконки: `@/Administrator/Components/Icons/Icons` (`upload`, `plus`)
 
