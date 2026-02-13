@@ -1,0 +1,119 @@
+/* Navbar */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 16px;
+    height: 40px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Logo */
+nav > div.nav_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    position: relative;
+    width: 153.61px;
+    max-width: 153.61px;
+    height: 32px;
+    max-height: 32px;
+}
+
+/* Navbar right */
+nav > div.nav_right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 40px;
+    width: 554px;
+    height: 32px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Navbar right phone */
+nav > div.nav_right > .nav_right_phone{
+    width: 176px;
+    height: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    color: var(--vl-blue-bg-color-one);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Navbar right mail */
+nav > div.nav_right > .nav_right_mail {
+    width: 170px;
+    height: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: var(--vl-text-color-two);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+/* Navbar right social */
+nav > div.nav_right > .nav_right_social {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 16px;
+    width: 128px;
+    height: 32px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+/* Socials item */
+nav > div.nav_right > .nav_right_social > div{
+    width: 32px;
+    height: 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+@media (max-width: 1280px) {
+    nav{
+        margin-bottom: 24px;
+        justify-content: center;
+    }
+
+    nav > div.nav_logo,
+    nav > div.nav_logo > img{
+        width: 192px;
+        max-width: 192px;
+        height: 40px;
+        max-height: 40px;
+    }
+
+    nav > div.nav_right {
+        display: none;
+    }
+}
