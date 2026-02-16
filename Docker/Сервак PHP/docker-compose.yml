@@ -1,0 +1,12 @@
+services:
+  php:
+    build: .
+    container_name: php_learning
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+    ports:
+      - "8090:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: php -S 0.0.0.0:8000
