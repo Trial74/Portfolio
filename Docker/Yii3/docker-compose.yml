@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+
+  php:
+    build: .
+    container_name: yii3_php
+    volumes:
+      - ./app:/var/www
+    working_dir: /var/www
+    environment:
+      APP_ENV: dev
+      APP_DEBUG: 1
+    depends_on:
+      - mysql
+      - postgres
+
+  nginx:
+    image: nginx:alpine
+    container_name: yii3_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  mysql:
+    image: mysql:8
+    container_name: yii3_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: yii3_db
+      MYSQL_USER: yii3_user
+      MYSQL_PASSWORD: yii3_pass
+    ports:
+      - "3306:3306"
+
+  postgres:
+    image: postgres:15
+    container_name: yii3_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: yii3_pg_db
+      POSTGRES_USER: yii3_pg_user
+      POSTGRES_PASSWORD: yii3_pg_pass
+    ports:
+      - "5432:5432"
